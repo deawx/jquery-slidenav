@@ -1,0 +1,79 @@
+*, *:before, *:after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body { padding: 20px; font-family: sans-serif; font-size: 100%; line-height: 1.25; }
+a { text-decoration: none; }
+
+a.is-active { background-color: #eee; }
+
+.container { margin: 0 0 15px; padding: 0; border: 1px solid #333; }
+
+.clear:before, .clear:after { content: " "; display: table; }
+.clear:after { clear: both; }
+.left { float: left; }
+.right { float: right; }
+
+.slidenav { overflow-x: hidden; }
+.slidenav-wrap { 
+    position: relative; 
+    padding-top: 1px; 
+    left: 0;
+}
+
+[class^="slidenav-menu-"], [class*=" slidenav-menu-"] {
+    position: absolute; top: 0; right: -250px; bottom: 0; z-index: 100;
+    overflow-x: hidden;
+    width: 250px;
+    background-color: #eee;
+}
+[class^="slidenav-menu-"]:before,   [class^="slidenav-menu-"]:after,
+[class*=" slidenav-menu-"]:before,  [class*=" slidenav-menu-"]:after {
+    content: " "; display: table;
+}
+[class^="slidenav-menu-"]:after, [class*=" slidenav-menu-"]:after {
+    clear: both
+}
+
+.slidenav-menu-right    { right: -250px; }
+.slidenav-menu-left     { left: -250px; }
+
+.slidenav-tierwrap { position: absolute; top: 0; left: 0; width: 250px; }
+.slidenav-tier { float: left; width: 250px; }
+
+.slidenav-tierlink { background-color: #E5E5E5; }
+.slidenav-tier > .slidenav-tierlink { background-color: #d5d5d5; }
+
+.slidenav-menu-right ul ul, 
+.slidenav-menu-left ul ul { display: none; }
+
+.slidenav-menu-right ul, 
+.slidenav-menu-left ul { 
+    list-style-type: none; 
+    margin: 0;
+    padding: 0;
+}
+
+.slidenav-menu-right ul li, 
+.slidenav-menu-left ul li,
+.slidenav-tier > a { 
+    border-bottom: 1px solid #ccc;
+}
+
+.slidenav-menu-right ul a, 
+.slidenav-menu-left ul a,
+.slidenav-tier > a,
+.slidenav-back { 
+    display: block;
+    padding: 7px 15px;
+}
+
+
+.topbar {
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+}
+.topbar:before, .topbar:after { content: " "; display: table; }
+.topbar:after { clear: both; }
